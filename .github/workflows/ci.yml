@@ -4,9 +4,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  test:
+  test-and-validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,3 +22,37 @@ jobs:
         run: ruff check .
       - name: Tests
         run: pytest -q
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+      - name: Bundle Validate
+        run: |
+          cd orchestration
+          databricks bundle validate -t dev
+
+  deploy-and-run-dev:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    needs: test-and-validate
+    runs-on: ubuntu-latest
+    environment: dev
+    env:
+      DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+      DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+      - name: Configure Databricks Auth
+        run: |
+          if [ -z "$DATABRICKS_HOST" ] || [ -z "$DATABRICKS_TOKEN" ]; then
+            echo "Missing DATABRICKS_HOST or DATABRICKS_TOKEN secret."
+            exit 1
+          fi
+          databricks auth env
+      - name: Bundle Deploy (dev)
+        run: |
+          cd orchestration
+          databricks bundle deploy -t dev
+      - name: Trigger Sprint1 Bronze Workflow
+        run: |
+          cd orchestration
+          databricks bundle run -t dev sprint1_bronze_orchestration
