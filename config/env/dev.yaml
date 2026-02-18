@@ -1,0 +1,4 @@
+environment: dev
+catalog: nfcu_dev
+schema_overrides:
+  bronze: bronze_banking

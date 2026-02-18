@@ -1,0 +1,10 @@
+pipelines:
+  b001:
+    source_system: fiserv_dna
+    target_table: bronze_banking.txn_core_raw
+  b002:
+    source_system: tsys_fis
+    target_table: bronze_cards.card_auth_raw
+  b003:
+    source_system: ofac_fincen
+    target_table: bronze_compliance.ofac_watchlist_raw
