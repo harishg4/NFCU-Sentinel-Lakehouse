@@ -1,14 +1,22 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
-from nfcu_sentinel.pipelines.bronze.spark_jobs import (
+_SCRIPT_REF = globals().get("__file__") or (sys.argv[0] if sys.argv else "")
+_SCRIPT_PATH = Path(_SCRIPT_REF).resolve() if _SCRIPT_REF else Path.cwd() / "scripts/databricks/run_sprint1_bronze_spark.py"
+REPO_SRC = (_SCRIPT_PATH.parents[2] / "src").as_posix()
+if REPO_SRC not in sys.path:
+    sys.path.insert(0, REPO_SRC)
+
+from nfcu_sentinel.pipelines.bronze.spark_jobs import (  # noqa: E402
     run_b001_with_spark,
     run_b002_with_spark,
     run_b003_with_spark,
 )
-from nfcu_sentinel.utils.spark_io import get_spark
+from nfcu_sentinel.utils.spark_io import get_spark  # noqa: E402
 
 
 def parse_args() -> argparse.Namespace:
@@ -50,4 +58,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

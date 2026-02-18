@@ -1,16 +1,85 @@
 bundle:
   name: nfcu-sentinel-lakehouse
 
+sync:
+  paths:
+    - ../scripts
+    - ../src
+
+variables:
+  catalog:
+    default: workspace
+  input_root:
+    default: dbfs:/Volumes/workspace/default/nfcu_raw
+  alert_email:
+    default: harishnaidugaddam@gmail.com
+
 resources:
   jobs:
     sprint1_bronze_orchestration:
       name: sprint1_bronze_orchestration
+      max_concurrent_runs: 1
+      queue:
+        enabled: true
+      schedule:
+        quartz_cron_expression: "0 15 2 * * ?"
+        timezone_id: "America/New_York"
+        pause_status: "PAUSED"
+      email_notifications:
+        on_failure:
+          - ${var.alert_email}
+      environments:
+        - environment_key: default
+          spec:
+            client: "2"
       tasks:
-        - task_key: run_sprint1_bronze
+        - task_key: b001_core_banking
+          environment_key: default
+          max_retries: 3
+          min_retry_interval_millis: 60000
+          retry_on_timeout: true
           spark_python_task:
-            python_file: scripts/databricks/run_sprint1_bronze_spark.py
+            python_file: ../scripts/databricks/run_single_bronze_spark.py
             parameters:
+              - --pipeline
+              - b001
               - --catalog
-              - nfcu_dev
+              - ${var.catalog}
               - --input-root
-              - dbfs:/FileStore/nfcu/raw
+              - ${var.input_root}
+        - task_key: b002_card_processing
+          depends_on:
+            - task_key: b001_core_banking
+          environment_key: default
+          max_retries: 3
+          min_retry_interval_millis: 60000
+          retry_on_timeout: true
+          spark_python_task:
+            python_file: ../scripts/databricks/run_single_bronze_spark.py
+            parameters:
+              - --pipeline
+              - b002
+              - --catalog
+              - ${var.catalog}
+              - --input-root
+              - ${var.input_root}
+        - task_key: b003_compliance_reference
+          depends_on:
+            - task_key: b002_card_processing
+          environment_key: default
+          max_retries: 3
+          min_retry_interval_millis: 60000
+          retry_on_timeout: true
+          spark_python_task:
+            python_file: ../scripts/databricks/run_single_bronze_spark.py
+            parameters:
+              - --pipeline
+              - b003
+              - --catalog
+              - ${var.catalog}
+              - --input-root
+              - ${var.input_root}
+
+targets:
+  dev:
+    mode: development
