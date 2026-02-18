@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-02-18T05:47:02.272455+00:00",
+  "advisories": [
+    {
+      "advisory_id": "FIN-0001",
+      "title": "Synthetic advisory 1",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0002",
+      "title": "Synthetic advisory 2",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0003",
+      "title": "Synthetic advisory 3",
+      "risk_theme": "Human Trafficking",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0004",
+      "title": "Synthetic advisory 4",
+      "risk_theme": "Human Trafficking",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0005",
+      "title": "Synthetic advisory 5",
+      "risk_theme": "Human Trafficking",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0006",
+      "title": "Synthetic advisory 6",
+      "risk_theme": "Structuring",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0007",
+      "title": "Synthetic advisory 7",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0008",
+      "title": "Synthetic advisory 8",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0009",
+      "title": "Synthetic advisory 9",
+      "risk_theme": "Human Trafficking",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0010",
+      "title": "Synthetic advisory 10",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0011",
+      "title": "Synthetic advisory 11",
+      "risk_theme": "Human Trafficking",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0012",
+      "title": "Synthetic advisory 12",
+      "risk_theme": "Cyber Fraud",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0013",
+      "title": "Synthetic advisory 13",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0014",
+      "title": "Synthetic advisory 14",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0015",
+      "title": "Synthetic advisory 15",
+      "risk_theme": "Cyber Fraud",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0016",
+      "title": "Synthetic advisory 16",
+      "risk_theme": "Human Trafficking",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0017",
+      "title": "Synthetic advisory 17",
+      "risk_theme": "Cyber Fraud",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0018",
+      "title": "Synthetic advisory 18",
+      "risk_theme": "Structuring",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0019",
+      "title": "Synthetic advisory 19",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0020",
+      "title": "Synthetic advisory 20",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0021",
+      "title": "Synthetic advisory 21",
+      "risk_theme": "Cyber Fraud",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0022",
+      "title": "Synthetic advisory 22",
+      "risk_theme": "Human Trafficking",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0023",
+      "title": "Synthetic advisory 23",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0024",
+      "title": "Synthetic advisory 24",
+      "risk_theme": "Structuring",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0025",
+      "title": "Synthetic advisory 25",
+      "risk_theme": "Human Trafficking",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0026",
+      "title": "Synthetic advisory 26",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0027",
+      "title": "Synthetic advisory 27",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0028",
+      "title": "Synthetic advisory 28",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0029",
+      "title": "Synthetic advisory 29",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0030",
+      "title": "Synthetic advisory 30",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0031",
+      "title": "Synthetic advisory 31",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0032",
+      "title": "Synthetic advisory 32",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0033",
+      "title": "Synthetic advisory 33",
+      "risk_theme": "Human Trafficking",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0034",
+      "title": "Synthetic advisory 34",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0035",
+      "title": "Synthetic advisory 35",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0036",
+      "title": "Synthetic advisory 36",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0037",
+      "title": "Synthetic advisory 37",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0038",
+      "title": "Synthetic advisory 38",
+      "risk_theme": "Cyber Fraud",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0039",
+      "title": "Synthetic advisory 39",
+      "risk_theme": "Structuring",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0040",
+      "title": "Synthetic advisory 40",
+      "risk_theme": "Human Trafficking",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0041",
+      "title": "Synthetic advisory 41",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0042",
+      "title": "Synthetic advisory 42",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0043",
+      "title": "Synthetic advisory 43",
+      "risk_theme": "Cyber Fraud",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0044",
+      "title": "Synthetic advisory 44",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0045",
+      "title": "Synthetic advisory 45",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0046",
+      "title": "Synthetic advisory 46",
+      "risk_theme": "Cyber Fraud",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0047",
+      "title": "Synthetic advisory 47",
+      "risk_theme": "Human Trafficking",
+      "severity": "medium"
+    },
+    {
+      "advisory_id": "FIN-0048",
+      "title": "Synthetic advisory 48",
+      "risk_theme": "Sanctions Evasion",
+      "severity": "critical"
+    },
+    {
+      "advisory_id": "FIN-0049",
+      "title": "Synthetic advisory 49",
+      "risk_theme": "Human Trafficking",
+      "severity": "high"
+    },
+    {
+      "advisory_id": "FIN-0050",
+      "title": "Synthetic advisory 50",
+      "risk_theme": "Structuring",
+      "severity": "medium"
+    }
+  ]
+}

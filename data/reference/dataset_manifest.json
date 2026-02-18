@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-02-18T05:47:02.273294+00:00",
+  "datasets": [
+    "data/raw/fiserv_dna/transaction_detail.csv",
+    "data/raw/tsys_fis/card_auth_stream.jsonl",
+    "data/raw/tsys_fis/card_clearing.csv",
+    "data/raw/compliance/ofac_watchlist.csv",
+    "data/raw/compliance/fincen_advisories.json",
+    "data/raw/compliance/blocked_entities.csv"
+  ],
+  "note": "Synthetic dataset for portfolio development only. Not real NFCU/customer data."
+}
