@@ -7,7 +7,8 @@ Sprint-1 implementation baseline for a Databricks-native fraud detection and reg
 - Reusable engineering utilities (`src/nfcu_sentinel/utils`)
 - Bronze pipeline starter modules (`src/nfcu_sentinel/pipelines/bronze`)
 - Databricks orchestration bundle (`orchestration/databricks.yml`)
-- CI workflow for lint/tests + Databricks bundle validate/deploy (`.github/workflows/ci.yml`)
+- CI workflow for lint/tests (`.github/workflows/ci.yml`)
+- Databricks CD workflow for deploy/promote/rollback (`.github/workflows/databricks-cd.yml`)
 - Unit tests for core utility behavior (`tests/`)
 
 ## Quick Start
@@ -56,6 +57,17 @@ databricks bundle validate -t dev
 databricks bundle deploy -t dev
 databricks bundle run -t dev sprint1_bronze_orchestration
 ```
+
+## CI/CD Promotion and Rollback
+
+- `ci.yml`: lint + tests on PR and `main`.
+- `databricks-cd.yml`:
+  - `push` to `main`: deploy/run `dev`.
+  - `workflow_dispatch`: promote to `qa`/`prod` (use GitHub Environment approvals).
+  - `workflow_dispatch` with `rollback_ref`: deploy a prior tag/sha (rollback).
+- Optional failure notifications can be configured with repository/environment secrets:
+  - `SLACK_WEBHOOK_URL`
+  - `PAGERDUTY_EVENTS_URL`
 
 ## Sprint 1 Mapping
 

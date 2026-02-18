@@ -83,3 +83,24 @@ resources:
 targets:
   dev:
     mode: development
+    default: true
+    variables:
+      catalog: workspace
+      input_root: dbfs:/Volumes/workspace/default/nfcu_raw
+      alert_email: harishnaidugaddam@gmail.com
+  qa:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/hng02070207@gmail.com/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: workspace
+      input_root: dbfs:/Volumes/workspace/default/nfcu_raw
+      alert_email: harishnaidugaddam@gmail.com
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/hng02070207@gmail.com/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: workspace
+      input_root: dbfs:/Volumes/workspace/default/nfcu_raw
+      alert_email: harishnaidugaddam@gmail.com

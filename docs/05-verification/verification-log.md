@@ -22,6 +22,13 @@
 - Verified local quality gates:
   - `pytest`: 10 passed.
   - `ruff check`: all checks passed.
+- Implemented DAT-1 CI/CD promotion flow updates:
+  - Split CI and CD workflows (`ci.yml`, `databricks-cd.yml`).
+  - Added environment-gated deploy jobs for `dev`, `qa`, `prod`.
+  - Added manual rollback via `workflow_dispatch` + `rollback_ref`.
+  - Added optional Slack/PagerDuty failure notification steps.
+- Added operational runbook:
+  - `docs/06-outputs/cicd-promotion-rollback-runbook.md`
 
 ## Open Verification Items
 
